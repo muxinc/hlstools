@@ -22,3 +22,7 @@ include_directories(${CURL_INCLUDE_DIRS} ${CMAKE_CURRENT_SOURCE_DIR}/nlohmann_js
 add_executable(muxincstreamvalidator main.cpp m3u8.cpp netutils.cpp tsanalyser.cpp)
 target_link_libraries(muxincstreamvalidator ${CURL_LIBRARIES})
 install (TARGETS muxincstreamvalidator DESTINATION bin)
+
+
+add_executable(ttbf ttfb.cpp m3u8.cpp netutils.cpp)
+target_link_libraries(ttbf ${CURL_LIBRARIES})
